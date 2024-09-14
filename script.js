@@ -1,10 +1,10 @@
-const apiKey = 'qXH1JOv6Ey6hFOez9pIgLkzznDsZwU80';  // Replace with your Giphy API key
+const apiKey = 'qXH1JOv6Ey6hFOez9pIgLkzznDsZwU80';
 
 document.getElementById('searchButton').addEventListener('click', async () => {
   const searchInput = document.getElementById('searchInput').value;
   if (searchInput.trim() !== '') {
     const gifContainer = document.getElementById('gifContainer');
-    gifContainer.innerHTML = '';  // Clear previous results
+    gifContainer.innerHTML = '';
 
     try {
       const response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${searchInput}&limit=10&offset=0&rating=g&lang=en`);
